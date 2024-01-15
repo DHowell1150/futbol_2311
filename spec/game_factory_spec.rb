@@ -84,7 +84,6 @@ RSpec.describe GameFactory do
       
       expect(@game_factory.games_by_team(3).all? {|game| (game.away_team_id == 3 || game.home_team_id == 3)}).to be true
     end
-     
   end
 
   describe 'goals_by_team(team_id)' do
