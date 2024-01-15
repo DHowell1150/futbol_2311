@@ -118,11 +118,11 @@ def goals_by_team_and_hoa(team_id, hoa)
   end
 
   def tackles_by_team(team_id, season_games)
-      tackles = 0
-      season_games.each do |game_team|
-        tackles += game_team.tackles if game_team.team_id == team_id
-      end
-      tackles
+    tackles = 0
+    season_games.each do |game_team|
+      tackles += game_team.tackles if game_team.team_id == team_id
+    end
+    tackles
   end
 
   def tackles_by_season(season)

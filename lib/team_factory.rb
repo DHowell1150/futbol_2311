@@ -2,8 +2,8 @@ require 'csv'
 
 class TeamFactory
 
-    attr_reader :file_path,
-                :teams
+  attr_reader :file_path,
+              :teams
 
   def initialize(file_path)
     @file_path = file_path

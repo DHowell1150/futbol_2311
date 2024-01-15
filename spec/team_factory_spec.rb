@@ -3,27 +3,26 @@ require 'spec_helper'
 RSpec.describe TeamFactory do
   before do
       
-      @file_path = './data/teams_fixture.csv'
-      @team_factory = TeamFactory.new(@file_path)
-      
+    @file_path = './data/teams_fixture.csv'
+    @team_factory = TeamFactory.new(@file_path)
   end
   
   describe '#initialize' do
 
-    it 'exists' do
+  it 'exists' do
 
-      expect(@team_factory).to be_a(TeamFactory)
-    end
-
-    it 'has a file path attribute' do
-
-      expect(@team_factory.file_path).to eq(@file_path)
-    end
-
-    it 'has a teams array attribute' do
-      expect(@team_factory.teams).to eq([])
-    end
+    expect(@team_factory).to be_a(TeamFactory)
   end
+
+  it 'has a file path attribute' do
+
+    expect(@team_factory.file_path).to eq(@file_path)
+  end
+
+  it 'has a teams array attribute' do
+    expect(@team_factory.teams).to eq([])
+  end
+end
 
   describe '#create_teams' do
     it 'creates team objects from the data stored in its file_path attribute' do

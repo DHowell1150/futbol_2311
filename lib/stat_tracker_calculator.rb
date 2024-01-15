@@ -144,5 +144,4 @@ class StatTrackerCalculator
     end.first
     @team_factory.teams.select {|team| team.team_id == team_id}.first.team_name 
   end
-
 end

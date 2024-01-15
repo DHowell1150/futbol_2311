@@ -108,7 +108,6 @@ RSpec.describe GameTeamFactory do
     it 'returns an array with all of the total goals scored by the team in argument for the games that they were home/away' do
       @game_team_factory.create_game_team
 
-
       expect(@game_team_factory.goals_by_team_and_hoa(3, "home")).to eq([1, 2])
       expect(@game_team_factory.goals_by_team_and_hoa(3, "away")).to eq([2, 2, 1])
     end
@@ -139,6 +138,7 @@ RSpec.describe GameTeamFactory do
 		describe "#game_results_count_by_result(result)" do
 			it "will return a count of tames with the given results" do
 				@game_team_factory.create_game_team
+        
 				expect(@game_team_factory.game_results_count_by_result("TIE")).to eq(4)
 			end
 	

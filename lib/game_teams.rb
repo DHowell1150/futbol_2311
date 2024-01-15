@@ -25,5 +25,4 @@ class GameTeam
     second_half = first_half.to_i.next.to_s
     season_id = first_half.concat(second_half).to_i
   end
-
 end
