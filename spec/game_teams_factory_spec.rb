@@ -148,5 +148,5 @@ RSpec.describe GameTeamFactory do
 				expect(@game_team_factory.game_results).to eq(["LOSS", "WIN", "LOSS", "WIN", "WIN", "LOSS", "WIN", "LOSS", "LOSS", "WIN", "WIN", "LOSS", "WIN", "LOSS", "LOSS", "WIN", "LOSS", "WIN", "LOSS", "WIN", "LOSS", "TIE", "TIE", "LOSS", "WIN", "LOSS", "WIN", "LOSS", "WIN", "TIE", "TIE", "LOSS", "WIN", "LOSS", "WIN", "TIE", "TIE", "LOSS", "WIN", "TIE", "TIE"])
 			end
 		end
-  	end
+  end
 end
