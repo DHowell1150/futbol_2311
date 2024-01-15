@@ -77,25 +77,25 @@ class StatTrackerCalculator
 
   def highest_scoring_visitor
     @team_factory.teams.max_by do |team|
-      (goals_at_away(team.team_id).sum.to_f) / (goals_at_away(team.team_id).count.to_f)
+      (@game_factory.goals_at_away(team.team_id).sum.to_f) / (@game_factory.goals_at_away(team.team_id).count.to_f)
       end.team_name
   end
   
   def highest_scoring_home_team	
     @team_factory.teams.max_by do |team|
-      (goals_at_home(team.team_id).sum.to_f) / (goals_at_home(team.team_id).count.to_f)
+      (@game_factory.goals_at_home(team.team_id).sum.to_f) / (@game_factory.goals_at_home(team.team_id).count.to_f)
       end.team_name
   end
 
   def lowest_scoring_visitor	
     @team_factory.teams.min_by do |team|
-      (goals_at_away(team.team_id).sum.to_f) / (goals_at_away(team.team_id).count.to_f)
+      (@game_factory.goals_at_away(team.team_id).sum.to_f) / (@game_factory.goals_at_away(team.team_id).count.to_f)
       end.team_name
   end
 
   def lowest_scoring_home_team	
     @team_factory.teams.min_by do |team|
-      (goals_at_home(team.team_id).sum.to_f) / (goals_at_home(team.team_id).count.to_f)
+      (@game_factory.goals_at_home(team.team_id).sum.to_f) / (@game_factory.goals_at_home(team.team_id).count.to_f)
       end.team_name
   end
   
