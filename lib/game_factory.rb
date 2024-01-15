@@ -73,7 +73,7 @@ class GameFactory
 
   def goals_at_home(team_id)
     goals_at_home = []
-    @game_factory.games.each do |game|
+    @games.each do |game|
       goals_at_home << game.home_goals if game.home_team_id == team_id
     end
     goals_at_home
@@ -81,7 +81,7 @@ class GameFactory
 
   def goals_at_away(team_id)
     goals_at_away = []
-    @game_factory.games.each do |game|
+    @games.each do |game|
       goals_at_away << game.away_goals if game.away_team_id == team_id
     end
     goals_at_away
